@@ -1,0 +1,1663 @@
+{
+ "$schema": "https://kit-demos-amf.vercel.app/docs/cliente.schema.json",
+ "id": "bodegon-devoto",
+ "nombre": "Bodegón Devoto",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "5491170961405",
+ "prefijoPedido": "BD",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo-sello.svg",
+  "logoPanel": "img/logo-sello.svg",
+  "favicon": "img/logo-sello.svg",
+  "colores": {
+   "fondo": "#FFF7F0",
+   "superficie": "#FFFFFF",
+   "texto": "#4A1828",
+   "primario": "#7A0331",
+   "sobrePrimario": "#FFF7F0",
+   "acento": "#E59BA8",
+   "sobreAcento": "#7A0331",
+   "borde": "#ECD3D8",
+   "suave": "#7E5560"
+  },
+  "fuentes": {
+   "titulos": "'Instrument Serif', Georgia, serif",
+   "texto": "'Hanken Grotesk', system-ui, sans-serif",
+   "googleFonts": "Instrument+Serif:ital@0;1&family=Krona+One&family=Hanken+Grotesk:wght@400;500;600;700"
+  },
+  "estilo": {
+   "forma": "redondeada",
+   "sombra": "suave",
+   "borde": "1.5px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": true,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "mar": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "mie": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "jue": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "vie": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "sab": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "dom": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ]
+ },
+ "reservas": {
+  "intervaloMin": 30,
+  "duracionMin": 105,
+  "capacidad": 60,
+  "maxPersonas": 12,
+  "anticipacionMin": 60,
+  "diasAdelante": 21,
+  "ultimoTurnoMin": 90,
+  "cerrados": []
+ },
+ "pedidos": {
+  "salidas": [
+   "whatsapp",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro",
+   "delivery"
+  ],
+  "envio": 0,
+  "minimo": 0
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "entradas",
+    "nombre": "Entradas",
+    "orden": 0
+   },
+   {
+    "id": "especialidades",
+    "nombre": "Especialidades",
+    "orden": 1
+   },
+   {
+    "id": "mila-ternera",
+    "nombre": "Mila de ternera",
+    "orden": 2
+   },
+   {
+    "id": "mila-pollo",
+    "nombre": "Mila de pollo",
+    "orden": 3
+   },
+   {
+    "id": "grillados",
+    "nombre": "Grillados",
+    "orden": 4
+   },
+   {
+    "id": "pastas",
+    "nombre": "Pastas",
+    "orden": 5
+   },
+   {
+    "id": "ensaladas",
+    "nombre": "Ensaladas",
+    "orden": 6
+   },
+   {
+    "id": "postres",
+    "nombre": "Postres",
+    "orden": 7
+   },
+   {
+    "id": "mediodia",
+    "nombre": "Menú del día",
+    "orden": 8
+   },
+   {
+    "id": "semana",
+    "nombre": "Pizarrón de la semana",
+    "orden": 9
+   },
+   {
+    "id": "cafeteria",
+    "nombre": "Cafetería",
+    "orden": 10
+   },
+   {
+    "id": "tragos",
+    "nombre": "Tragos",
+    "orden": 11
+   },
+   {
+    "id": "medidas",
+    "nombre": "Medidas",
+    "orden": 12
+   },
+   {
+    "id": "cervezas",
+    "nombre": "Cervezas y sin alcohol",
+    "orden": 13
+   },
+   {
+    "id": "malbec",
+    "nombre": "Malbec",
+    "orden": 14
+   },
+   {
+    "id": "cabernet-franc",
+    "nombre": "Cabernet Franc",
+    "orden": 15
+   },
+   {
+    "id": "cabernet-sauvignon",
+    "nombre": "Cabernet Sauvignon",
+    "orden": 16
+   },
+   {
+    "id": "blend",
+    "nombre": "Blend",
+    "orden": 17
+   },
+   {
+    "id": "blancos",
+    "nombre": "Chardonnay y blancos",
+    "orden": 18
+   },
+   {
+    "id": "rosados",
+    "nombre": "Rosados, pinot y espumosos",
+    "orden": 19
+   }
+  ],
+  "productos": [
+   {
+    "id": "entradas-provoleta-clasica",
+    "categoria": "entradas",
+    "nombre": "Provoleta clásica",
+    "descripcion": "",
+    "precio": 19000,
+    "foto": "img/carta/provoleta.webp"
+   },
+   {
+    "id": "entradas-provoleta-devoto",
+    "categoria": "entradas",
+    "nombre": "Provoleta Devoto",
+    "descripcion": "Con morrón, cebolla crispy, huevo frito y panceta.",
+    "precio": 21500,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "entradas-burrata-siciliana",
+    "categoria": "entradas",
+    "nombre": "Burrata siciliana",
+    "descripcion": "Sobre mix de verdes, aliño de olivas negras y tomates asados.",
+    "precio": 26000,
+    "foto": "img/carta/burrata.webp",
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "entradas-tortilla-de-papas",
+    "categoria": "entradas",
+    "nombre": "Tortilla de papas",
+    "descripcion": "",
+    "precio": 18000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "entradas-tortilla-a-la-espanola",
+    "categoria": "entradas",
+    "nombre": "Tortilla a la española",
+    "descripcion": "Con chorizo colorado y pimientos.",
+    "precio": 19500
+   },
+   {
+    "id": "entradas-tortilla-de-la-casa",
+    "categoria": "entradas",
+    "nombre": "Tortilla de la casa",
+    "descripcion": "Con chistorra y alioli de ajo.",
+    "precio": 23500,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "entradas-bunuelos-de-espinaca",
+    "categoria": "entradas",
+    "nombre": "Buñuelos de espinaca",
+    "descripcion": "",
+    "precio": 17500,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "entradas-rabas-rebozadas-con-alioli",
+    "categoria": "entradas",
+    "nombre": "Rabas rebozadas con alioli",
+    "descripcion": "",
+    "precio": 23500,
+    "foto": "img/carta/rabas.webp"
+   },
+   {
+    "id": "entradas-gambas-al-ajillo-con-papas",
+    "categoria": "entradas",
+    "nombre": "Gambas al ajillo con papas",
+    "descripcion": "",
+    "precio": 30000
+   },
+   {
+    "id": "entradas-empanada-de-carne-souffle",
+    "categoria": "entradas",
+    "nombre": "Empanada de carne soufflé",
+    "descripcion": "Cortada a cuchillo.",
+    "precio": 5100,
+    "foto": "img/carta/empanada.webp"
+   },
+   {
+    "id": "entradas-empanada-veggie-souffle",
+    "categoria": "entradas",
+    "nombre": "Empanada veggie soufflé",
+    "descripcion": "Vegetales al wok, queso de almendras y hongos.",
+    "precio": 4500,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "entradas-guarnicion-adicional",
+    "categoria": "entradas",
+    "nombre": "Guarnición adicional",
+    "descripcion": "Papas fritas, batatas fritas, puré de papa, puré de calabaza, ensalada mixta, rúcula y parmesano o verduras asadas.",
+    "precio": 8000
+   },
+   {
+    "id": "especialidades-risotto-cremoso-de-cordero",
+    "categoria": "especialidades",
+    "nombre": "Risotto cremoso de cordero",
+    "descripcion": "Con almendras, pesto genovés y fondo de cocción.",
+    "precio": 36800
+   },
+   {
+    "id": "especialidades-gran-bife-de-chorizo-mariposa-800-g",
+    "categoria": "especialidades",
+    "nombre": "Gran bife de chorizo mariposa 800 g",
+    "descripcion": "Con provoleta, morrón asado, panceta, papas y huevos fritos.",
+    "precio": 89000,
+    "etiquetas": [
+     "comen2"
+    ]
+   },
+   {
+    "id": "especialidades-bondiola-braseada",
+    "categoria": "especialidades",
+    "nombre": "Bondiola braseada",
+    "descripcion": "Con puré crema de batata y polvo de panceta.",
+    "precio": 38500
+   },
+   {
+    "id": "especialidades-matambre-a-la-pizza",
+    "categoria": "especialidades",
+    "nombre": "Matambre a la pizza",
+    "descripcion": "Con papas españolas.",
+    "precio": 38500
+   },
+   {
+    "id": "especialidades-milanesa-de-bife-de-chorizo",
+    "categoria": "especialidades",
+    "nombre": "Milanesa de bife de chorizo",
+    "descripcion": "Con ñoquis rellenos de queso al gratén.",
+    "precio": 36000,
+    "foto": "img/carta/mila-bife.webp"
+   },
+   {
+    "id": "especialidades-milanesa-de-la-casa",
+    "categoria": "especialidades",
+    "nombre": "Milanesa de la casa",
+    "descripcion": "Provolone, chorizo colorado, huevo frito, morrón asado y verdeo.",
+    "precio": 38000,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "especialidades-lomo-a-la-marsala",
+    "categoria": "especialidades",
+    "nombre": "Lomo a la marsala",
+    "descripcion": "Con reducción de vino tinto y papas noisette.",
+    "precio": 49500
+   },
+   {
+    "id": "especialidades-escalopes-de-lomo-al-champignon",
+    "categoria": "especialidades",
+    "nombre": "Escalopes de lomo al champignon",
+    "descripcion": "Con papas noisette. El favorito de los que pasan por casa.",
+    "precio": 38500,
+    "foto": "img/carta/escalopes.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "especialidades-ravioles-nero-di-sepia",
+    "categoria": "especialidades",
+    "nombre": "Ravioles nero di sepia",
+    "descripcion": "Rellenos con trucha, a la crema de puerros y ají panka, con langostinos y pebre andino.",
+    "precio": 35000,
+    "foto": "img/carta/ravioles-nero.webp"
+   },
+   {
+    "id": "especialidades-papardelles-al-strogonoff",
+    "categoria": "especialidades",
+    "nombre": "Papardelles al strogonoff",
+    "descripcion": "Lomo, champignones y crema.",
+    "precio": 35000
+   },
+   {
+    "id": "especialidades-trucha-de-la-casa",
+    "categoria": "especialidades",
+    "nombre": "Trucha de la casa",
+    "descripcion": "Con ensalada de rúcula, tomate cherry, cebolla morada, palta y aderezo de lima.",
+    "precio": 36000
+   },
+   {
+    "id": "especialidades-pastel-de-papa",
+    "categoria": "especialidades",
+    "nombre": "Pastel de papa",
+    "descripcion": "",
+    "precio": 28000
+   },
+   {
+    "id": "especialidades-medio-pollo-al-verdeo",
+    "categoria": "especialidades",
+    "nombre": "Medio pollo al verdeo",
+    "descripcion": "Pechuga, pata y muslo al verdeo, con papas españolas.",
+    "precio": 35000,
+    "etiquetas": [
+     "comen2"
+    ]
+   },
+   {
+    "id": "especialidades-filet-de-merluza-a-la-romana",
+    "categoria": "especialidades",
+    "nombre": "Filet de merluza a la romana",
+    "descripcion": "Con puré mixto.",
+    "precio": 33000,
+    "etiquetas": [
+     "comen2"
+    ]
+   },
+   {
+    "id": "especialidades-pollito-relleno",
+    "categoria": "especialidades",
+    "nombre": "Pollito relleno",
+    "descripcion": "Con tomates secos, crema de espinacas y muzzarella, con papas españolas.",
+    "precio": 30000
+   },
+   {
+    "id": "mt-la-simple",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · La simple",
+    "descripcion": "",
+    "precio": 26500,
+    "foto": "img/carta/mila-simple.webp"
+   },
+   {
+    "id": "mt-la-simple__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · La simple XL",
+    "descripcion": "",
+    "precio": 42000,
+    "foto": "img/carta/mila-simple.webp"
+   },
+   {
+    "id": "mt-a-caballo",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · A caballo",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 30500
+   },
+   {
+    "id": "mt-a-caballo__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · A caballo XL",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 44100
+   },
+   {
+    "id": "mt-napo-completa",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Napo completa",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 32000,
+    "foto": "img/carta/napo.webp"
+   },
+   {
+    "id": "mt-napo-completa__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Napo completa XL",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 51500,
+    "foto": "img/carta/napo.webp"
+   },
+   {
+    "id": "mt-cheddar-y-panceta",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Cheddar y panceta",
+    "descripcion": "",
+    "precio": 32000
+   },
+   {
+    "id": "mt-cheddar-y-panceta__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Cheddar y panceta XL",
+    "descripcion": "",
+    "precio": 51500
+   },
+   {
+    "id": "mt-al-roquefort",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Al roquefort",
+    "descripcion": "",
+    "precio": 32000
+   },
+   {
+    "id": "mt-al-roquefort__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Al roquefort XL",
+    "descripcion": "",
+    "precio": 51500
+   },
+   {
+    "id": "mt-suiza",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Suiza",
+    "descripcion": "",
+    "precio": 30700
+   },
+   {
+    "id": "mt-suiza__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Suiza XL",
+    "descripcion": "",
+    "precio": 50000
+   },
+   {
+    "id": "mt-fugazzeta",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Fugazzeta",
+    "descripcion": "",
+    "precio": 30700
+   },
+   {
+    "id": "mt-fugazzeta__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Fugazzeta XL",
+    "descripcion": "",
+    "precio": 50000
+   },
+   {
+    "id": "mt-con-hongos",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Con hongos",
+    "descripcion": "",
+    "precio": 33000
+   },
+   {
+    "id": "mt-con-hongos__xl",
+    "categoria": "mila-ternera",
+    "nombre": "Mila de ternera · Con hongos XL",
+    "descripcion": "",
+    "precio": 54000
+   },
+   {
+    "id": "mt-xxl",
+    "categoria": "mila-ternera",
+    "nombre": "Gran mila Bodegón XXL",
+    "descripcion": "Porciones de cheddar y panceta, provoleta con chorizo colorado, espinaca y salsa blanca, hongos, napolitana y rúcula con chutney de tomates, pesto de aceitunas negras y parmesano. Con papas fritas y dos huevos fritos.",
+    "precio": 95000,
+    "foto": "img/carta/milas.webp",
+    "etiquetas": [
+     "comen4"
+    ]
+   },
+   {
+    "id": "mp-la-simple",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · La simple",
+    "descripcion": "",
+    "precio": 23800
+   },
+   {
+    "id": "mp-la-simple__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · La simple XL",
+    "descripcion": "",
+    "precio": 38500
+   },
+   {
+    "id": "mp-a-caballo",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · A caballo",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 27300
+   },
+   {
+    "id": "mp-a-caballo__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · A caballo XL",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 40000
+   },
+   {
+    "id": "mp-napo-completa",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Napo completa",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 28700
+   },
+   {
+    "id": "mp-napo-completa__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Napo completa XL",
+    "descripcion": "Con papas fritas y dos huevos fritos.",
+    "precio": 46700
+   },
+   {
+    "id": "mp-cheddar-y-panceta",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Cheddar y panceta",
+    "descripcion": "",
+    "precio": 28800
+   },
+   {
+    "id": "mp-cheddar-y-panceta__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Cheddar y panceta XL",
+    "descripcion": "",
+    "precio": 46700
+   },
+   {
+    "id": "mp-al-roquefort",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Al roquefort",
+    "descripcion": "",
+    "precio": 27400
+   },
+   {
+    "id": "mp-al-roquefort__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Al roquefort XL",
+    "descripcion": "",
+    "precio": 46700
+   },
+   {
+    "id": "mp-suiza",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Suiza",
+    "descripcion": "",
+    "precio": 27600
+   },
+   {
+    "id": "mp-suiza__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Suiza XL",
+    "descripcion": "",
+    "precio": 45000
+   },
+   {
+    "id": "mp-fugazzeta",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Fugazzeta",
+    "descripcion": "",
+    "precio": 27600
+   },
+   {
+    "id": "mp-fugazzeta__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Fugazzeta XL",
+    "descripcion": "",
+    "precio": 45000
+   },
+   {
+    "id": "mp-con-hongos",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Con hongos",
+    "descripcion": "",
+    "precio": 29700
+   },
+   {
+    "id": "mp-con-hongos__xl",
+    "categoria": "mila-pollo",
+    "nombre": "Suprema · Con hongos XL",
+    "descripcion": "",
+    "precio": 48000
+   },
+   {
+    "id": "mp-xxl",
+    "categoria": "mila-pollo",
+    "nombre": "Gran suprema Bodegón XXL",
+    "descripcion": "Porciones de cheddar y panceta, provoleta con chorizo colorado, espinaca y salsa blanca, hongos, napolitana y rúcula con chutney de tomates, pesto de aceitunas negras y parmesano. Con papas fritas y dos huevos fritos.",
+    "precio": 82000,
+    "etiquetas": [
+     "comen4"
+    ]
+   },
+   {
+    "id": "grillados-bife-de-chorizo-mariposa-800-g",
+    "categoria": "grillados",
+    "nombre": "Bife de chorizo mariposa 800 g",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 83000,
+    "etiquetas": [
+     "comen2"
+    ]
+   },
+   {
+    "id": "grillados-bife-de-chorizo-400-g",
+    "categoria": "grillados",
+    "nombre": "Bife de chorizo 400 g",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 45000,
+    "foto": "img/carta/bife.webp"
+   },
+   {
+    "id": "grillados-entrana",
+    "categoria": "grillados",
+    "nombre": "Entraña 350 g",
+    "descripcion": "Con guarnición a elección. La de 700 g: comen dos.",
+    "precio": 45000
+   },
+   {
+    "id": "grillados-entrana__700",
+    "categoria": "grillados",
+    "nombre": "Entraña 350 g · 700 g",
+    "descripcion": "Con guarnición a elección. La de 700 g: comen dos.",
+    "precio": 78000
+   },
+   {
+    "id": "grillados-matambrito-de-cerdo",
+    "categoria": "grillados",
+    "nombre": "Matambrito de cerdo",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 34000
+   },
+   {
+    "id": "grillados-matambre-tiernizado",
+    "categoria": "grillados",
+    "nombre": "Matambre tiernizado",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 38000
+   },
+   {
+    "id": "grillados-pechuga-de-pollo",
+    "categoria": "grillados",
+    "nombre": "Pechuga de pollo",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 27000
+   },
+   {
+    "id": "grillados-trucha-grill",
+    "categoria": "grillados",
+    "nombre": "Trucha grill",
+    "descripcion": "Con guarnición a elección.",
+    "precio": 36000
+   },
+   {
+    "id": "pastas-tagliatelle-al-huevo",
+    "categoria": "pastas",
+    "nombre": "Tagliatelle al huevo",
+    "descripcion": "Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 24000,
+    "foto": "img/carta/tagliatelle.webp"
+   },
+   {
+    "id": "pastas-sorrentinos-de-jamon-y-queso",
+    "categoria": "pastas",
+    "nombre": "Sorrentinos de jamón y queso",
+    "descripcion": "Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 29000
+   },
+   {
+    "id": "pastas-noquis-de-pura-papa",
+    "categoria": "pastas",
+    "nombre": "Ñoquis de pura papa",
+    "descripcion": "Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 27500
+   },
+   {
+    "id": "pastas-malfatti-de-espinaca",
+    "categoria": "pastas",
+    "nombre": "Malfatti de espinaca",
+    "descripcion": "Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 25000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "pastas-ravioles-de-morron",
+    "categoria": "pastas",
+    "nombre": "Ravioles de morrón",
+    "descripcion": "Rellenos de bondiola braseada. Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 29000
+   },
+   {
+    "id": "pastas-ravioles-caseritos",
+    "categoria": "pastas",
+    "nombre": "Ravioles caseritos",
+    "descripcion": "Rellenos de espinaca y ricota. Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 28000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "pastas-panzotti-de-calabaza",
+    "categoria": "pastas",
+    "nombre": "Panzotti de calabaza",
+    "descripcion": "Con salsa clásica a elección: filetto, rosa, crema, estofado de carne, crema de hongos, cuatro quesos, pesto o crema de espinacas.",
+    "precio": 28500,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "ensaladas-tibia-de-langostinos",
+    "categoria": "ensaladas",
+    "nombre": "Tibia de langostinos",
+    "descripcion": "Langostinos, palta, mix de verdes, tomate cherry confit, cebolla morada encurtida y aderezo de salsa de ostras.",
+    "precio": 30300
+   },
+   {
+    "id": "ensaladas-caesar-salad",
+    "categoria": "ensaladas",
+    "nombre": "Caesar salad",
+    "descripcion": "Mix de verdes, pollo, croutones, parmesano y aderezo César original.",
+    "precio": 29300
+   },
+   {
+    "id": "ensaladas-pera-y-roquefort",
+    "categoria": "ensaladas",
+    "nombre": "Pera y roquefort",
+    "descripcion": "Con mix de verdes, espinaca, rúcula, berenjenas al escabeche, crocante de maní y aliño de aceto.",
+    "precio": 27500,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "ensaladas-la-clasica-a-eleccion",
+    "categoria": "ensaladas",
+    "nombre": "La clásica a elección",
+    "descripcion": "Hasta 5 ingredientes: lechuga, tomate, zanahoria, rúcula, cebolla y huevo.",
+    "precio": 21000,
+    "etiquetas": [
+     "veggie"
+    ]
+   },
+   {
+    "id": "postres-flan-casero-al-caramelo",
+    "categoria": "postres",
+    "nombre": "Flan casero al caramelo",
+    "descripcion": "Con dulce de leche, crema o mixto.",
+    "precio": 10500,
+    "foto": "img/carta/flan.webp",
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "postres-budin-de-pan-al-caramelo",
+    "categoria": "postres",
+    "nombre": "Budín de pan al caramelo",
+    "descripcion": "Con dulce de leche, crema o mixto.",
+    "precio": 10000
+   },
+   {
+    "id": "postres-panqueques-de-dulce-de-leche",
+    "categoria": "postres",
+    "nombre": "Panqueques de dulce de leche",
+    "descripcion": "",
+    "precio": 13000,
+    "foto": "img/carta/panqueques.webp"
+   },
+   {
+    "id": "postres-panqueque-de-manzana",
+    "categoria": "postres",
+    "nombre": "Panqueque de manzana",
+    "descripcion": "Con helado de americana.",
+    "precio": 14500
+   },
+   {
+    "id": "postres-tiramisu-italiano",
+    "categoria": "postres",
+    "nombre": "Tiramisú italiano",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "postres-cheesecake-nueva-york",
+    "categoria": "postres",
+    "nombre": "Cheesecake Nueva York",
+    "descripcion": "Con frutos rojos.",
+    "precio": 14000,
+    "foto": "img/carta/cheesecake.webp"
+   },
+   {
+    "id": "postres-volcan-de-chocolate",
+    "categoria": "postres",
+    "nombre": "Volcán de chocolate",
+    "descripcion": "Con helado de pistacho.",
+    "precio": 21000,
+    "foto": "img/carta/volcan.webp"
+   },
+   {
+    "id": "postres-copa-helada",
+    "categoria": "postres",
+    "nombre": "Copa helada",
+    "descripcion": "Dos bochas: crema americana, dulce de leche, chocolate o frutilla.",
+    "precio": 15000
+   },
+   {
+    "id": "menu-del-dia",
+    "categoria": "mediodia",
+    "nombre": "Menú del día",
+    "descripcion": "Lunes a viernes de 12 a 16 hs. Entrada, plato principal y postre o café. Las opciones cambian todas las semanas.",
+    "precio": 24000
+   },
+   {
+    "id": "plato-del-dia",
+    "categoria": "mediodia",
+    "nombre": "Plato del día",
+    "descripcion": "Lunes a viernes de 12 a 16 hs. Plato principal y limonada clásica.",
+    "precio": 18000
+   },
+   {
+    "id": "menu-kids",
+    "categoria": "mediodia",
+    "nombre": "Menú kids",
+    "descripcion": "Milanesa o suprema de pollo con puré de papa o papas fritas, o ñoquis de papa con salsa rosa.",
+    "precio": 20000
+   },
+   {
+    "id": "semana-lun",
+    "categoria": "semana",
+    "nombre": "Lunes",
+    "descripcion": "Entrada: Empanada de carne soufflé · Principal: Milanesa de ternera con puré · Postre: Flan casero",
+    "precio": 24000
+   },
+   {
+    "id": "semana-mar",
+    "categoria": "semana",
+    "nombre": "Martes",
+    "descripcion": "Entrada: Buñuelos de espinaca · Principal: Ñoquis de pura papa con salsa rosa · Postre: Budín de pan",
+    "precio": 24000
+   },
+   {
+    "id": "semana-mie",
+    "categoria": "semana",
+    "nombre": "Miércoles",
+    "descripcion": "Entrada: Tortilla de papas · Principal: Pastel de papa · Postre: Flan casero",
+    "precio": 24000
+   },
+   {
+    "id": "semana-jue",
+    "categoria": "semana",
+    "nombre": "Jueves",
+    "descripcion": "Entrada: Provoleta clásica · Principal: Medio pollo al verdeo con papas españolas · Postre: Panqueque de dulce de leche",
+    "precio": 24000
+   },
+   {
+    "id": "semana-vie",
+    "categoria": "semana",
+    "nombre": "Viernes",
+    "descripcion": "Entrada: Rabas con alioli · Principal: Tagliatelle con estofado de carne · Postre: Copa helada",
+    "precio": 24000
+   },
+   {
+    "id": "cafeteria-ristretto",
+    "categoria": "cafeteria",
+    "nombre": "Ristretto",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-cafe",
+    "categoria": "cafeteria",
+    "nombre": "Café",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-cafe-en-jarrito",
+    "categoria": "cafeteria",
+    "nombre": "Café en jarrito",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-cafe-doble",
+    "categoria": "cafeteria",
+    "nombre": "Café doble",
+    "descripcion": "",
+    "precio": 6000
+   },
+   {
+    "id": "cafeteria-lagrima",
+    "categoria": "cafeteria",
+    "nombre": "Lágrima",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-cafe-con-leche",
+    "categoria": "cafeteria",
+    "nombre": "Café con leche",
+    "descripcion": "",
+    "precio": 6000
+   },
+   {
+    "id": "cafeteria-cortado",
+    "categoria": "cafeteria",
+    "nombre": "Cortado",
+    "descripcion": "",
+    "precio": 3800
+   },
+   {
+    "id": "cafeteria-cortado-en-jarrito",
+    "categoria": "cafeteria",
+    "nombre": "Cortado en jarrito",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-capuccino",
+    "categoria": "cafeteria",
+    "nombre": "Capuccino",
+    "descripcion": "",
+    "precio": 5500
+   },
+   {
+    "id": "cafeteria-cafe-irlandes",
+    "categoria": "cafeteria",
+    "nombre": "Café irlandés",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cafeteria-te-inti-zen",
+    "categoria": "cafeteria",
+    "nombre": "Té Inti Zen",
+    "descripcion": "",
+    "precio": 4400
+   },
+   {
+    "id": "cafeteria-jugo-exprimido-de-naranja",
+    "categoria": "cafeteria",
+    "nombre": "Jugo exprimido de naranja",
+    "descripcion": "",
+    "precio": 5300
+   },
+   {
+    "id": "cafeteria-limonada-clasica",
+    "categoria": "cafeteria",
+    "nombre": "Limonada clásica",
+    "descripcion": "",
+    "precio": 4700
+   },
+   {
+    "id": "cafeteria-limonada-clasica__grande",
+    "categoria": "cafeteria",
+    "nombre": "Limonada clásica grande",
+    "descripcion": "",
+    "precio": 7400
+   },
+   {
+    "id": "cafeteria-limonada-menta-y-jengibre",
+    "categoria": "cafeteria",
+    "nombre": "Limonada menta y jengibre",
+    "descripcion": "",
+    "precio": 5500
+   },
+   {
+    "id": "cafeteria-limonada-menta-y-jengibre__grande",
+    "categoria": "cafeteria",
+    "nombre": "Limonada menta y jengibre grande",
+    "descripcion": "",
+    "precio": 8500
+   },
+   {
+    "id": "cafeteria-limonada-frutos-rojos",
+    "categoria": "cafeteria",
+    "nombre": "Limonada frutos rojos",
+    "descripcion": "",
+    "precio": 5100
+   },
+   {
+    "id": "cafeteria-limonada-frutos-rojos__grande",
+    "categoria": "cafeteria",
+    "nombre": "Limonada frutos rojos grande",
+    "descripcion": "",
+    "precio": 7900
+   },
+   {
+    "id": "tragos-fernet-branca-con-coca-cola",
+    "categoria": "tragos",
+    "nombre": "Fernet Branca con Coca-Cola",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-gin-tonic-blu",
+    "categoria": "tragos",
+    "nombre": "Gin tonic Blu",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-cuba-libre",
+    "categoria": "tragos",
+    "nombre": "Cuba libre",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-aperol-spritz",
+    "categoria": "tragos",
+    "nombre": "Aperol spritz",
+    "descripcion": "",
+    "precio": 11000
+   },
+   {
+    "id": "tragos-vermuth-carpano",
+    "categoria": "tragos",
+    "nombre": "Vermuth Carpano",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-espresso-borghetti",
+    "categoria": "tragos",
+    "nombre": "Espresso Borghetti",
+    "descripcion": "",
+    "precio": 12000
+   },
+   {
+    "id": "tragos-cynar-julep",
+    "categoria": "tragos",
+    "nombre": "Cynar julep",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-mojito",
+    "categoria": "tragos",
+    "nombre": "Mojito",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-negroni",
+    "categoria": "tragos",
+    "nombre": "Negroni",
+    "descripcion": "",
+    "precio": 12000
+   },
+   {
+    "id": "tragos-negroni-perfecto",
+    "categoria": "tragos",
+    "nombre": "Negroni perfecto",
+    "descripcion": "",
+    "precio": 15000
+   },
+   {
+    "id": "tragos-campari-orange",
+    "categoria": "tragos",
+    "nombre": "Campari orange",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-caipiroska-sernova",
+    "categoria": "tragos",
+    "nombre": "Caipiroska Sernova",
+    "descripcion": "",
+    "precio": 10000
+   },
+   {
+    "id": "tragos-maquita",
+    "categoria": "tragos",
+    "nombre": "Maquita",
+    "descripcion": "De autor. Fernet, vermú rosso, vino tinto, almíbar de romero y tónica.",
+    "precio": 12500,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "tragos-sangria-devota",
+    "categoria": "tragos",
+    "nombre": "Sangría devota",
+    "descripcion": "De autor. Vino tinto, almíbar de flores y de frutos rojos, y limón.",
+    "precio": 12500,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "tragos-soda-todo-rojo",
+    "categoria": "tragos",
+    "nombre": "Soda todo rojo",
+    "descripcion": "De autor. Vermú bianco y rosso, soda, almíbar de frutos rojos y lima.",
+    "precio": 12500,
+    "etiquetas": [
+     "casa"
+    ]
+   },
+   {
+    "id": "medidas-jack-daniel-s",
+    "categoria": "medidas",
+    "nombre": "Jack Daniel's",
+    "descripcion": "",
+    "precio": 16000
+   },
+   {
+    "id": "medidas-jack-daniel-s-honey",
+    "categoria": "medidas",
+    "nombre": "Jack Daniel's Honey",
+    "descripcion": "",
+    "precio": 16000
+   },
+   {
+    "id": "medidas-jameson",
+    "categoria": "medidas",
+    "nombre": "Jameson",
+    "descripcion": "",
+    "precio": 14000
+   },
+   {
+    "id": "medidas-red-label",
+    "categoria": "medidas",
+    "nombre": "Red Label",
+    "descripcion": "",
+    "precio": 18000
+   },
+   {
+    "id": "medidas-black-label",
+    "categoria": "medidas",
+    "nombre": "Black Label",
+    "descripcion": "",
+    "precio": 20000
+   },
+   {
+    "id": "medidas-bombay",
+    "categoria": "medidas",
+    "nombre": "Bombay",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "medidas-tanqueray",
+    "categoria": "medidas",
+    "nombre": "Tanqueray",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "medidas-absolut",
+    "categoria": "medidas",
+    "nombre": "Absolut",
+    "descripcion": "",
+    "precio": 13000
+   },
+   {
+    "id": "medidas-macallan-12-anos",
+    "categoria": "medidas",
+    "nombre": "Macallan 12 años",
+    "descripcion": "",
+    "precio": 32000
+   },
+   {
+    "id": "medidas-jose-cuervo",
+    "categoria": "medidas",
+    "nombre": "José Cuervo",
+    "descripcion": "",
+    "precio": 16000
+   },
+   {
+    "id": "medidas-baileys",
+    "categoria": "medidas",
+    "nombre": "Baileys",
+    "descripcion": "",
+    "precio": 12000
+   },
+   {
+    "id": "cervezas-corona-330-cc",
+    "categoria": "cervezas",
+    "nombre": "Corona 330 cc",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cervezas-stella-artois-473-cc",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois 473 cc",
+    "descripcion": "",
+    "precio": 7000
+   },
+   {
+    "id": "cervezas-stella-artois-0-0",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois 0.0",
+    "descripcion": "",
+    "precio": 5000
+   },
+   {
+    "id": "cervezas-andes-roja-473-cc",
+    "categoria": "cervezas",
+    "nombre": "Andes Roja 473 cc",
+    "descripcion": "",
+    "precio": 5500
+   },
+   {
+    "id": "cervezas-andes-ipa-473-cc",
+    "categoria": "cervezas",
+    "nombre": "Andes IPA 473 cc",
+    "descripcion": "",
+    "precio": 5500
+   },
+   {
+    "id": "cervezas-agua-sin-o-con-gas",
+    "categoria": "cervezas",
+    "nombre": "Agua sin o con gas",
+    "descripcion": "",
+    "precio": 3600
+   },
+   {
+    "id": "cervezas-gaseosa-linea-coca-cola-1-5-l",
+    "categoria": "cervezas",
+    "nombre": "Gaseosa línea Coca-Cola 1,5 L",
+    "descripcion": "",
+    "precio": 8000
+   },
+   {
+    "id": "cervezas-gaseosa-linea-coca-cola-500-ml",
+    "categoria": "cervezas",
+    "nombre": "Gaseosa línea Coca-Cola 500 ml",
+    "descripcion": "",
+    "precio": 4500
+   },
+   {
+    "id": "malbec-la-celia-pioneer",
+    "categoria": "malbec",
+    "nombre": "La Celia Pioneer",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 20000
+   },
+   {
+    "id": "malbec-la-celia-reserva",
+    "categoria": "malbec",
+    "nombre": "La Celia Reserva",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "malbec-fabre-montmayou",
+    "categoria": "malbec",
+    "nombre": "Fabre Montmayou",
+    "descripcion": "Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "malbec-fabre-montmayou__copa",
+    "categoria": "malbec",
+    "nombre": "Fabre Montmayou (copa)",
+    "descripcion": "Mendoza",
+    "precio": 5000
+   },
+   {
+    "id": "malbec-saint-felicien",
+    "categoria": "malbec",
+    "nombre": "Saint Felicien",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "malbec-animal",
+    "categoria": "malbec",
+    "nombre": "Animal",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "malbec-animal__copa",
+    "categoria": "malbec",
+    "nombre": "Animal (copa)",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 6000
+   },
+   {
+    "id": "malbec-salentein-reserva",
+    "categoria": "malbec",
+    "nombre": "Salentein Reserva",
+    "descripcion": "Bodega Salentein · Valle de Uco",
+    "precio": 26000
+   },
+   {
+    "id": "malbec-salentein-reserva__copa",
+    "categoria": "malbec",
+    "nombre": "Salentein Reserva (copa)",
+    "descripcion": "Bodega Salentein · Valle de Uco",
+    "precio": 8000
+   },
+   {
+    "id": "malbec-cordero-con-piel-de-lobo",
+    "categoria": "malbec",
+    "nombre": "Cordero con piel de lobo",
+    "descripcion": "Mosquita Muerta · Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "malbec-padrillos",
+    "categoria": "malbec",
+    "nombre": "Padrillos",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 20000
+   },
+   {
+    "id": "malbec-obra-reserva",
+    "categoria": "malbec",
+    "nombre": "Obra Reserva",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 22000
+   },
+   {
+    "id": "cabernet-franc-nicasia",
+    "categoria": "cabernet-franc",
+    "nombre": "Nicasia",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 20500
+   },
+   {
+    "id": "cabernet-franc-fabre-montmayou",
+    "categoria": "cabernet-franc",
+    "nombre": "Fabre Montmayou",
+    "descripcion": "Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "cabernet-franc-pioneer",
+    "categoria": "cabernet-franc",
+    "nombre": "Pioneer",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 20000
+   },
+   {
+    "id": "cabernet-franc-obra-reserva",
+    "categoria": "cabernet-franc",
+    "nombre": "Obra Reserva",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 22000
+   },
+   {
+    "id": "cabernet-franc-angelica-zapata",
+    "categoria": "cabernet-franc",
+    "nombre": "Angélica Zapata",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 45000
+   },
+   {
+    "id": "cabernet-sauvignon-marraso",
+    "categoria": "cabernet-sauvignon",
+    "nombre": "Marraso",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 15800
+   },
+   {
+    "id": "cabernet-sauvignon-obra-reserva",
+    "categoria": "cabernet-sauvignon",
+    "nombre": "Obra Reserva",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 22000
+   },
+   {
+    "id": "cabernet-sauvignon-pioneer",
+    "categoria": "cabernet-sauvignon",
+    "nombre": "Pioneer",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 22000
+   },
+   {
+    "id": "cabernet-sauvignon-saint-felicien",
+    "categoria": "cabernet-sauvignon",
+    "nombre": "Saint Felicien",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "blend-nicasia-red-blend-malbec",
+    "categoria": "blend",
+    "nombre": "Nicasia Red Blend Malbec",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 20500
+   },
+   {
+    "id": "blend-dv-catena-cabernet-malbec",
+    "categoria": "blend",
+    "nombre": "DV Catena Cabernet Malbec",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 28000
+   },
+   {
+    "id": "blend-dv-catena-cabernet-cabernet",
+    "categoria": "blend",
+    "nombre": "DV Catena Cabernet Cabernet",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 35000
+   },
+   {
+    "id": "blend-dv-catena-malbec-malbec",
+    "categoria": "blend",
+    "nombre": "DV Catena Malbec Malbec",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 42000
+   },
+   {
+    "id": "blend-gran-reserva-blend",
+    "categoria": "blend",
+    "nombre": "Gran Reserva Blend",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 52000
+   },
+   {
+    "id": "blancos-chardonnay-pioneer",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Pioneer",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 22000
+   },
+   {
+    "id": "blancos-chardonnay-salentein-reserva",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Salentein Reserva",
+    "descripcion": "Bodega Salentein · Valle de Uco",
+    "precio": 26000
+   },
+   {
+    "id": "blancos-chardonnay-salentein-reserva__copa",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Salentein Reserva (copa)",
+    "descripcion": "Bodega Salentein · Valle de Uco",
+    "precio": 8000
+   },
+   {
+    "id": "blancos-chardonnay-saint-felicien",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Saint Felicien",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "blancos-chardonnay-angelica-zapata",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Angélica Zapata",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 48000
+   },
+   {
+    "id": "blancos-chardonnay-animal",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Animal",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "blancos-chardonnay-animal__copa",
+    "categoria": "blancos",
+    "nombre": "Chardonnay Animal (copa)",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 6000
+   },
+   {
+    "id": "blancos-los-pasos-blanco-dulce",
+    "categoria": "blancos",
+    "nombre": "Los Pasos Blanco Dulce",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 16000
+   },
+   {
+    "id": "blancos-nicasia-blanc-de-blancs",
+    "categoria": "blancos",
+    "nombre": "Nicasia Blanc de Blancs",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 20500
+   },
+   {
+    "id": "blancos-la-celia-reserva-pinot-grigio",
+    "categoria": "blancos",
+    "nombre": "La Celia Reserva Pinot Grigio",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "rosados-rosado-pioneer",
+    "categoria": "rosados",
+    "nombre": "Rosado Pioneer",
+    "descripcion": "Finca La Celia · Mendoza",
+    "precio": 18000
+   },
+   {
+    "id": "rosados-rosado-los-pasos-dulce",
+    "categoria": "rosados",
+    "nombre": "Rosado Los Pasos Dulce",
+    "descripcion": "Séptima · Mendoza",
+    "precio": 16000
+   },
+   {
+    "id": "rosados-rosado-animal",
+    "categoria": "rosados",
+    "nombre": "Rosado Animal",
+    "descripcion": "Ernesto Catena · Mendoza",
+    "precio": 25000
+   },
+   {
+    "id": "rosados-dv-catena-pinot-pinot",
+    "categoria": "rosados",
+    "nombre": "DV Catena Pinot Pinot",
+    "descripcion": "Catena Zapata · Mendoza",
+    "precio": 40000
+   },
+   {
+    "id": "rosados-salentein-extra-brut",
+    "categoria": "rosados",
+    "nombre": "Salentein Extra Brut",
+    "descripcion": "Espumoso · Valle de Uco",
+    "precio": 20200
+   },
+   {
+    "id": "rosados-salentein-brut-nature",
+    "categoria": "rosados",
+    "nombre": "Salentein Brut Nature",
+    "descripcion": "Espumoso · Valle de Uco",
+    "precio": 19600
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu comanda",
+  "verPedido": "Ver comanda",
+  "agregar": "Marcha",
+  "agregado": "¡Marchando!",
+  "carritoVacio": "La comanda está vacía.",
+  "carritoVacioSub": "Elegí algo de la carta y lo anotamos acá.",
+  "retiro": "Paso a buscarlo",
+  "delivery": "Que me lo traigan (envío a coordinar)",
+  "enviarPedido": "¡Que marche!",
+  "pagar": "¡Que marche! · Pagar",
+  "pedidoListo": "¡Marchando!",
+  "pedidoListoSub": "Tu pedido {codigo} ya está en la cocina. Te escribimos por WhatsApp cuando esté listo.",
+  "waPedido": "Hola {negocio}! Les paso mi comanda:",
+  "reservarMesa": "Guardame una mesa",
+  "confirmarReserva": "Guardame la mesa",
+  "reservaLista": "Mesa guardada",
+  "reservaListaSub": "{personas} · {dia} a las {hora}. Los esperamos en casa: te confirmamos por WhatsApp.",
+  "comentario": "Comentario (cumple, silla para bebé, mesa afuera…)",
+  "panel": "La cocina"
+ }
+}

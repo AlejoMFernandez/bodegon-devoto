@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bodegón Devoto · Sabores de siempre en el barrio de siempre</title>
+<meta name="description" content="Bodegón en Villa Devoto: milanesas en seis sabores, provoleta, pastas caseras y flan. Todos los días de 12 a 24 en Av. Chivilcoy 3818. Reservá tu mesa o pedí para llevar.">
+<meta name="theme-color" content="#E59BA8">
+<link rel="icon" href="img/logo-sello.svg" type="image/svg+xml">
+<meta property="og:title" content="Bodegón Devoto">
+<meta property="og:description" content="Sabores de siempre en el barrio de siempre. Av. Chivilcoy 3818, Villa Devoto.">
+<meta property="og:image" content="img/fotos/hero-mesa.webp">
+<script>
+  // Intro sin parpadeo: se decide antes de pintar.
+  (function () {
+    var d = document.documentElement, q = new URLSearchParams(location.search);
+    d.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && q.get('intro') !== '0') d.classList.add('con-intro');
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Krona+One&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="img/fotos/hero-mesa.webp">
+<link rel="stylesheet" href="kit/kit.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Bodegón Devoto","servesCuisine":"Bodegón porteño","address":{"@type":"PostalAddress","streetAddress":"Av. Chivilcoy 3818","addressLocality":"Villa Devoto, CABA","addressCountry":"AR"},"telephone":"+54 9 11 7096-1405","openingHours":"Mo-Su 12:00-24:00","acceptsReservations":"True","sameAs":["https://www.instagram.com/bodegon.devoto/"]}
+</script>
+</head>
+<body>
+
+<!-- ============ INTRO: se levanta la campana ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__stage">
+    <svg class="intro__campana" viewBox="0 0 220 170" aria-hidden="true">
+      <g class="intro__vapor"><path d="M92 30 q-9 -11 0 -20 q9 -9 0 -18"/><path d="M110 24 q-9 -11 0 -20 q9 -9 0 -18"/><path d="M128 30 q-9 -11 0 -20 q9 -9 0 -18"/></g>
+      <g class="intro__tapa"><circle cx="110" cy="56" r="8"/><path d="M42 128 A68 68 0 0 1 178 128 Z"/></g>
+      <path class="intro__bandeja" d="M18 136 H202"/>
+    </svg>
+    <p class="intro__grito">¡A comer!</p>
+  </div>
+  <div class="intro__sello"><img src="img/logo-sello.svg" alt="" width="300" height="300"></div>
+</div>
+
+<!-- ============ BARRA ============ -->
+<header class="barra" id="barra">
+  <a class="barra__logo" href="#inicio" aria-label="Bodegón Devoto, inicio"><img src="img/logo-sello.svg" alt="" width="58" height="58"></a>
+  <nav class="barra__nav" id="menu" aria-label="Secciones">
+    <a href="#hoy">Menú del día</a>
+    <a href="#carta">Carta</a>
+    <a href="#mila">Elegí tu mila</a>
+    <a href="#mesa">Armá la mesa</a>
+    <a href="#llegar">Cómo llegar</a>
+    <a class="barra__nav-cta" href="#reservar" data-kit-open="reservas">Reservá una mesa</a>
+  </nav>
+  <div class="barra__acciones">
+    <a class="btn btn--linea btn--chico solo-desk" href="#carta">Pedí para llevar</a>
+    <button type="button" class="btn btn--chico" data-kit-open="reservas"><span>Reservá<span class="solo-desk"> una mesa</span></span></button>
+    <button type="button" class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__texto">
+    <p class="kicker hero__kicker" data-dia="BODEGÓN · VILLA DEVOTO · EST. 2024" data-noche="NOCHES EN EL BODEGÓN · HASTA LAS 24">BODEGÓN · VILLA DEVOTO · EST. 2024</p>
+    <h1 class="hero__titulo">
+      <span class="linea"><span>Sabores de siempre</span></span>
+      <span class="linea"><span><em>en el barrio</em></span></span>
+      <span class="linea"><span>de siempre.</span></span>
+    </h1>
+    <p class="hero__bajada">Platos abundantes, vino en la mesa y sobremesas largas. Milanesas en seis sabores, provoleta, pastas caseras y el flan de la casa.</p>
+    <div class="hero__ctas">
+      <button type="button" class="btn btn--grande" data-kit-open="reservas">Guardame una mesa</button>
+      <a class="btn btn--linea btn--grande" href="#carta">Ver la carta</a>
+    </div>
+    <ul class="hero__datos">
+      <li id="estadoAbierto">Todos los días de 12 a 24</li>
+      <li>Av. Chivilcoy 3818</li>
+    </ul>
+  </div>
+  <div class="hero__foto">
+    <figure class="arco">
+      <img id="heroImg" src="img/fotos/hero-mesa.webp" data-dia="img/fotos/hero-mesa.webp" data-noche="img/fotos/noche-69.webp" alt="Mesa del bodegón con bife de chorizo, papas fritas y vino tinto sobre la fórmica bordó" width="1200" height="1600" fetchpriority="high">
+    </figure>
+    <div class="sello-giro" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0"/></defs>
+        <text textLength="458" lengthAdjust="spacing"><textPath href="#circ" textLength="458" lengthAdjust="spacing">COMEN DOS 〜 PICAN TRES 〜 BODEGÓN DEVOTO 〜</textPath></text></svg>
+      <img src="img/escudo-ink.png" alt="" width="220" height="244">
+    </div>
+    <a class="hoy-card" href="#hoy" id="hoyCard">
+      <span class="hoy-card__k">HOY · LUN A VIE 12 A 16</span>
+      <b class="hoy-card__t">Menú del día $24.000</b>
+      <span class="hoy-card__s">Entrada, principal y postre o café</span>
+    </a>
+    <img class="hero__mozo" src="img/mozo-sticker.svg" alt="El mozo de Bodegón Devoto" width="440" height="460">
+  </div>
+</section>
+
+<!-- ============ ¿QUÉ COMEMOS HOY? ============ -->
+<section class="seccion hoy" id="hoy">
+  <div class="hoy__texto">
+    <p class="kicker revela">MENÚ DEL DÍA · LUNES A VIERNES DE 12 A 16</p>
+    <h2 class="titulo revela">¿Qué comemos <em>hoy?</em></h2>
+    <p class="bajada revela">Entrada, plato principal y postre o café por <b>$24.000</b>. O el plato del día con limonada por <b>$18.000</b>. Las opciones cambian todas las semanas.</p>
+    <div class="dias revela" role="tablist" aria-label="Días de la semana" id="dias"></div>
+    <p class="hoy__estado revela" id="hoyEstado" aria-live="polite"></p>
+    <div class="hoy__ctas revela">
+      <button type="button" class="btn" data-kit-open="reservas">Reservá para el mediodía</button>
+      <button type="button" class="btn btn--linea" data-kit-add="menu-del-dia">Pedilo para llevar</button>
+    </div>
+  </div>
+  <div class="pizarron revela" id="pizarron">
+    <span class="pizarron__dia" id="pizDia">Miércoles</span>
+    <dl class="pizarron__lista">
+      <div><dt>Entrada</dt><dd id="pizE">—</dd></div>
+      <div><dt>Principal</dt><dd id="pizP">—</dd></div>
+      <div><dt>Postre o café</dt><dd id="pizPo">—</dd></div>
+    </dl>
+    <span class="pizarron__precio">$24.000</span>
+    <span class="pizarron__nota">Ejemplo de pizarrón: el local lo carga cada semana desde su panel.</span>
+    <img class="pizarron__mozo" src="img/mozo-blanco.svg" alt="" width="440" height="460">
+  </div>
+</section>
+
+<!-- ============ LA CARTA ============ -->
+<section class="seccion carta" id="carta">
+  <div class="carta__cabeza">
+    <p class="kicker revela">LA CARTA · PARA COMPARTIR</p>
+    <h2 class="titulo revela">Clásicos de bodegón <em>y algo más</em></h2>
+    <p class="bajada revela">Todo lo que está acá se puede pedir para llevar o con delivery: tocá <b>Marcha</b> y lo anotamos en tu comanda.</p>
+  </div>
+  <div class="libro" id="libro">
+    <div class="libro__tapa" aria-hidden="true">
+      <div class="libro__hoja libro__hoja--izq"><span>Bodegón</span></div>
+      <div class="libro__hoja libro__hoja--der"><span>Devoto</span></div>
+    </div>
+    <div class="libro__adentro">
+      <aside class="carta__indice" aria-label="Secciones de la carta">
+        <div class="carta__paginas" id="cartaPaginas" role="tablist" aria-label="Páginas de la carta"></div>
+        <nav class="carta__secciones" id="cartaSecciones" aria-label="Secciones"></nav>
+      </aside>
+      <div class="carta__cuerpo">
+        <div data-kit="carta" id="kitCarta"></div>
+      </div>
+      <aside class="carta__foto" aria-hidden="true">
+        <figure class="carta__foto-marco" id="fotoMarco">
+          <img id="fotoPlato" src="img/carta/escalopes.webp" alt="" width="700" height="933">
+          <figcaption id="fotoNombre">Pasá el mouse por un plato con <i></i></figcaption>
+        </figure>
+      </aside>
+    </div>
+  </div>
+  <p class="carta__pie revela">Cubierto $3.000 por persona en el salón (no se cobra de lunes a viernes al mediodía) · Precios en pesos.</p>
+</section>
+
+<!-- ============ ELEGÍ TU MILA ============ -->
+<section class="seccion mila" id="mila">
+  <div class="mila__plato revela">
+    <div class="mila__disco" id="milaDisco">
+      <img id="milaImg" src="img/carta/napo.webp" alt="Milanesa napolitana completa con papas fritas" width="700" height="873">
+    </div>
+    <span class="mila__xl" id="milaXL" aria-hidden="true">XL</span>
+    <img class="mila__mozo" src="img/mozo-sticker.svg" alt="" width="440" height="460">
+  </div>
+  <div class="mila__panel">
+    <p class="kicker revela">EN TODA MESA DE BODEGÓN HAY UNA MILANESA</p>
+    <h2 class="titulo revela">Elegí tu <em>mila</em></h2>
+    <div class="seg revela" role="radiogroup" aria-label="Carne">
+      <button type="button" role="radio" aria-checked="true" data-carne="mt">Ternera</button>
+      <button type="button" role="radio" aria-checked="false" data-carne="mp">Pollo</button>
+    </div>
+    <div class="sabores revela" id="sabores" role="radiogroup" aria-label="Sabor"></div>
+    <label class="switch revela">
+      <input type="checkbox" id="xl">
+      <span class="switch__pista" aria-hidden="true"><span></span></span>
+      <span>Agrandala a <b>XL</b></span>
+    </label>
+    <div class="mila__resumen revela">
+      <div>
+        <b class="mila__nombre" id="milaNombre">Napo completa</b>
+        <span class="mila__desc" id="milaDesc">Con guarnición a elección.</span>
+      </div>
+      <span class="mila__precio" id="milaPrecio">$32.000</span>
+    </div>
+    <div class="mila__ctas revela">
+      <button type="button" class="btn btn--grande" id="milaMarcha" data-kit-add="mt-napo-completa">Marcha una napo</button>
+      <button type="button" class="btn btn--linea" data-kit-add="mt-xxl">Gran mila XXL · comen 4</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARMÁ LA MESA ============ -->
+<section class="seccion mesa" id="mesa">
+  <div class="mesa__cabeza">
+    <p class="kicker revela">COMEN DOS, PICAN TRES</p>
+    <h2 class="titulo revela">Armá <em>la mesa</em></h2>
+    <p class="bajada revela">Arrastrá los platos a la mesa (o tocalos en el celu). Te decimos para cuántos alcanza y lo mandás a la cocina o reservás para esa cantidad.</p>
+  </div>
+  <div class="mesa__grilla">
+    <div class="mesa__bandeja revela" id="bandeja" aria-label="Platos para sumar a la mesa"></div>
+    <div class="mesa__tabla revela" id="tabla" aria-label="La mesa" aria-live="polite">
+      <p class="mesa__vacia" id="mesaVacia">Traé los platos acá</p>
+    </div>
+    <div class="mesa__cuenta revela">
+      <span class="mesa__comen" id="mesaComen">La mesa está vacía</span>
+      <span class="mesa__total" id="mesaTotal">$0</span>
+      <div class="mesa__ctas">
+        <button type="button" class="btn btn--rosa" id="mesaMarcha" disabled>Que marche esta mesa</button>
+        <button type="button" class="btn btn--linea-rosa" id="mesaReserva" disabled>Reservá para 2</button>
+        <button type="button" class="link-rosa" id="mesaLimpiar">Levantar la mesa</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA (mazo) ============ -->
+<section class="seccion mazo" id="mesas">
+  <div class="mazo__texto">
+    <p class="kicker revela">@BODEGON.DEVOTO</p>
+    <h2 class="titulo revela">Así se ven <em>nuestras mesas</em></h2>
+    <p class="bajada revela" id="mazoPie">"La mesa perfecta se ve algo así."</p>
+    <div class="mazo__ctas revela">
+      <button type="button" class="btn" id="mazoSig">Pasá la foto</button>
+      <a class="btn btn--linea" href="https://www.instagram.com/bodegon.devoto/" target="_blank" rel="noopener">Seguinos en Instagram</a>
+    </div>
+  </div>
+  <div class="mazo__pila revela" id="mazo" role="group" aria-roledescription="mazo de fotos" aria-label="Fotos de nuestras mesas"></div>
+</section>
+
+<!-- ============ RESERVAS ============ -->
+<section class="seccion reservar" id="reservar">
+  <figure class="reservar__foto revela">
+    <img src="img/fotos/mesa-79.webp" alt="Mesa puesta con mantel blanco, servilletas a rayas y vino tinto" width="1000" height="1247" loading="lazy">
+    <img class="reservar__mozo" src="img/mozo-sticker.svg" alt="" width="440" height="460" loading="lazy">
+  </figure>
+  <div class="reservar__form">
+    <p class="kicker revela">RESERVAS ONLINE</p>
+    <h2 class="titulo revela">Guardame <em>una mesa</em></h2>
+    <p class="bajada revela">Elegí día, horario y cuántos son. Te confirmamos por WhatsApp. Para más de 12 personas, escribinos.</p>
+    <div class="marco revela">
+      <span class="marco__titulo">RESERVAS</span>
+      <div data-kit="reservas"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO LLEGAR ============ -->
+<section class="seccion llegar" id="llegar">
+  <div class="vidriera revela" id="vidriera">
+    <div class="toldo" aria-hidden="true"></div>
+    <div class="vidriera__vidrio">
+      <img src="img/fotos/salon-61.webp" alt="El salón de Bodegón Devoto lleno al mediodía" width="1200" height="1200" loading="lazy">
+      <div class="visillo visillo--izq" aria-hidden="true"></div>
+      <div class="visillo visillo--der" aria-hidden="true"></div>
+      <span class="vidriera__neon" aria-hidden="true">Bodegón Devoto</span>
+    </div>
+    <button type="button" class="vidriera__boton" id="espiar" aria-pressed="false">Espiá el salón</button>
+  </div>
+  <div class="llegar__info">
+    <p class="kicker revela">LOS ESPERAMOS EN CASA</p>
+    <h2 class="titulo revela">Cómo <em>llegar</em></h2>
+    <dl class="datos revela">
+      <div><dt>Dónde</dt><dd>Av. Chivilcoy 3818, Villa Devoto<br><span class="datos__sub">A metros de plaza Arenales</span></dd></div>
+      <div><dt>Cuándo</dt><dd>Todos los días de 12 a 24<br><span class="datos__sub" id="estadoAbierto2">Cocina abierta todo el día</span></dd></div>
+      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5491170961405" target="_blank" rel="noopener">11 7096-1405</a><br><span class="datos__sub">Reservas, pedidos, delivery y take away</span></dd></div>
+    </dl>
+    <div class="llegar__ctas revela">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Chivilcoy+3818,+Villa+Devoto,+CABA" target="_blank" rel="noopener">Abrir en Maps</a>
+      <a class="btn btn--linea" href="https://wa.me/5491170961405" target="_blank" rel="noopener">Escribinos</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pie">
+  <div class="pie__arriba">
+    <img class="pie__cinta" src="img/cinta-ink.png" alt="Bodegón Devoto" width="1640" height="662" loading="lazy">
+    <p class="pie__frase">Sabores de siempre<br><em>en el barrio de siempre.</em></p>
+  </div>
+  <div class="pie__cols">
+    <div><b>Dirección</b><span>Av. Chivilcoy 3818<br>Villa Devoto, CABA</span></div>
+    <div><b>Horario</b><span>Todos los días<br>de 12 a 24</span></div>
+    <div><b>Contacto</b><a href="https://wa.me/5491170961405" target="_blank" rel="noopener">WhatsApp 11 7096-1405</a><a href="https://www.instagram.com/bodegon.devoto/" target="_blank" rel="noopener">Instagram @bodegon.devoto</a></div>
+    <div><b>La web</b><a href="#carta">Carta</a><a href="#reservar">Reservas</a><a href="admin/" target="_blank" rel="noopener">Panel del local</a></div>
+  </div>
+  <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<!-- ============ EL MOZO (mascota) ============ -->
+<div class="mozo" id="mozo">
+  <div class="mozo__chat" id="mozoChat" role="dialog" aria-label="Preguntale al mozo" hidden>
+    <div class="mozo__chat-cabeza"><b>¿Qué le traigo?</b><button type="button" class="mozo__x" id="mozoX" aria-label="Cerrar">×</button></div>
+    <div class="mozo__mensajes" id="mozoMensajes" aria-live="polite"></div>
+    <div class="mozo__preguntas" id="mozoPreguntas"></div>
+  </div>
+  <button type="button" class="mozo__boton" id="mozoBoton" aria-label="Preguntale al mozo" aria-expanded="false" aria-controls="mozoChat">
+    <span class="mozo__globo" id="mozoGlobo">¿Qué le traigo?</span>
+    <span class="mozo__cuerpo"><img src="img/mozo-sticker.svg" alt="" width="440" height="460"></span>
+    <span class="mozo__plato" id="mozoPlato" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__fondo" data-cerrar></div>
+  <figure class="lightbox__caja"><img id="lightboxImg" src="" alt=""><figcaption id="lightboxPie"></figcaption>
+    <button type="button" class="lightbox__x" data-cerrar aria-label="Cerrar">×</button></figure>
+</div>
+
+<script type="module" src="js/main.js?v=1"></script>
+</body>
+</html>
